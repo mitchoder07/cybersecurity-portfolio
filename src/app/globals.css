@@ -225,6 +225,15 @@
   .text-glow-cyber {
     text-shadow: 0 0 14px oklch(from var(--cyber) l c h / 0.55), 0 0 28px oklch(from var(--cyber) l c h / 0.25);
   }
+  /* In light mode the neon text-shadow blurs otherwise-sharp headings (e.g.
+     "Security is not a product. It's a process."). Drop the glow so titles
+     stay crisp; the glow is retained in dark mode via .dark above. */
+  :root .text-glow {
+    text-shadow: none;
+  }
+  :root .text-glow-cyber {
+    text-shadow: none;
+  }
 
   /* Gradient text — neon green to cyber cyan */
   .gradient-text {
@@ -367,7 +376,7 @@
     animation: marquee 40s linear infinite;
   }
   .animate-marquee-fast {
-    animation: marquee 22s linear infinite;
+    animation: marquee 42s linear infinite;
   }
 
   /* Vertical marquee for feed */

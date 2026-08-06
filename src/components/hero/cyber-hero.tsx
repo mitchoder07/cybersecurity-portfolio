@@ -93,7 +93,7 @@ export function CyberHero() {
       </div>
 
       <div className="container-max relative flex min-h-screen flex-col justify-center px-4 pt-32 pb-20 sm:px-6 lg:px-8">
-        <div className="relative w-full max-w-3xl">
+        <div className="relative w-full max-w-3xl pb-2 md:pb-4">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -229,28 +229,34 @@ export function CyberHero() {
               </div>
             ))}
           </motion.div>
-        </div>
 
-        {/* Scroll indicator */}
-        <motion.button
-          onClick={() => scrollTo("about")}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.8 }}
-          className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[var(--neon-soft)] hover:text-[var(--neon)] md:flex"
-          data-cursor="pointer"
-        >
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em]">
-            {t.hero.scroll}
-          </span>
-          <div className="relative h-10 w-6 rounded-full border border-current">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-1/2 top-1.5 h-2 w-0.5 -translate-x-1/2 rounded-full bg-current"
-            />
-          </div>
-        </motion.button>
+          {/* Scroll indicator — in normal flow below the stats so it never
+              overlaps the hero stats on shorter desktop viewports. */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.8 }}
+            className="mt-12 flex justify-center sm:mt-16 md:mt-20"
+          >
+            <button
+              onClick={() => scrollTo("about")}
+              className="flex flex-col items-center gap-2 text-[var(--neon-soft)] transition-colors hover:text-[var(--neon)]"
+              data-cursor="pointer"
+              aria-label={t.hero.scroll}
+            >
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em]">
+                {t.hero.scroll}
+              </span>
+              <div className="relative h-10 w-6 rounded-full border border-current">
+                <motion.div
+                  animate={{ y: [0, 12, 0] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute left-1/2 top-1.5 h-2 w-0.5 -translate-x-1/2 rounded-full bg-current"
+                />
+              </div>
+            </button>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
