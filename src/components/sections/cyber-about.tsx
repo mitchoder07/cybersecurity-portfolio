@@ -70,7 +70,7 @@ export function CyberAbout() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="sticky top-24 rounded-md border border-[var(--neon)]/25 bg-[#0a0a0a]/80 p-6 backdrop-blur-md sm:p-8">
+            <div className="sticky top-24 rounded-md border border-[var(--neon)]/25 bg-[var(--surface)] p-6 backdrop-blur-md sm:p-8">
               <div className="mb-3 flex items-center gap-2 font-mono text-xs text-[var(--neon-soft)]">
                 <Terminal className="h-3.5 w-3.5" />
                 <span>cat core_competencies.txt</span>

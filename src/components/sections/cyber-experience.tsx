@@ -62,12 +62,12 @@ export function CyberExperience() {
                   }`}
                 >
                   {/* Node */}
-                  <div className="absolute left-0 top-1.5 flex h-8 w-8 items-center justify-center rounded-md border border-[var(--neon)]/40 bg-[#0a0a0a] ring-2 ring-[var(--neon)]/20 sm:left-1/2 sm:-translate-x-1/2">
+                  <div className="absolute left-0 top-1.5 flex h-8 w-8 items-center justify-center rounded-md border border-[var(--neon)]/40 bg-[var(--surface-solid)] ring-2 ring-[var(--neon)]/20 sm:left-1/2 sm:-translate-x-1/2">
                     <ShieldCheck className="h-3.5 w-3.5 text-[var(--neon)]" />
                   </div>
 
                   {/* Card */}
-                  <div className="terminal-border group rounded-md bg-[#0a0a0a]/70 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[var(--neon)]/40 hover:bg-[#0a0a0a]/90 sm:p-6">
+                  <div className="terminal-border group rounded-md bg-[var(--surface)] p-5 backdrop-blur-sm transition-all duration-300 hover:border-[var(--neon)]/40 hover:bg-[var(--surface-strong)] sm:p-6">
                     <div className="mb-2 flex flex-wrap items-center gap-2">
                       <span className="rounded-md border border-[var(--neon)]/30 bg-[var(--neon)]/10 px-2.5 py-0.5 font-mono text-[11px] font-medium text-[var(--neon)]">
                         {item.period}

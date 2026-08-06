@@ -136,7 +136,7 @@ export function LockedContent({
               exit={{ scale: 0.9, y: 20 }}
               transition={{ duration: shake ? 0.4 : 0.2 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-md overflow-hidden rounded-lg border border-[#00ff41]/30 bg-[#0a0a0a] shadow-2xl"
+              className="relative w-full max-w-md overflow-hidden rounded-lg border border-[#00ff41]/30 bg-[var(--surface-solid)] shadow-2xl"
               style={{ boxShadow: "0 0 40px rgba(0,255,65,0.15)" }}
             >
               {/* Terminal header */}

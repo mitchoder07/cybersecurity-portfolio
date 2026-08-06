@@ -58,12 +58,12 @@ export function CyberHero() {
       className="relative min-h-screen w-full overflow-hidden bg-grid scanlines"
     >
       {/* Matrix rain canvas background — full screen, no dark overlay */}
-      <div className="absolute inset-0 -z-10 bg-[#0a0a0a]">
+      <div className="absolute inset-0 -z-10 bg-[var(--surface-solid)]">
         <MatrixRain opacity={0.35} />
       </div>
 
-      {/* Status bar at top */}
-      <div className="absolute left-0 right-0 top-0 z-20 border-b border-[var(--neon)]/20 bg-[#0a0a0a]/80 backdrop-blur-sm">
+      {/* Kept below the fixed navigation so the security readout never competes with it. */}
+      <div className="absolute left-0 right-0 top-20 z-20 border-y border-[var(--neon)]/20 bg-[var(--surface-strong)] backdrop-blur-sm sm:top-[5.5rem]">
         <div className="container-max flex items-center justify-between px-4 py-2 text-[11px] sm:text-xs">
           <div className="flex items-center gap-2 sm:gap-4">
             <span className="flex items-center gap-1.5 text-[var(--neon)]">

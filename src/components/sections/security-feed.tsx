@@ -63,7 +63,7 @@ export function SecurityFeed() {
         </div>
 
         {/* Marquee ticker — horizontal scrolling */}
-        <div className="terminal-border relative overflow-hidden rounded-md bg-[#0a0a0a]/80 backdrop-blur-sm">
+        <div className="terminal-border relative overflow-hidden rounded-md bg-[var(--surface)] backdrop-blur-sm">
           <div className="flex w-max animate-marquee-fast items-stretch gap-3 py-4">
             {doubled.map((item, i) => {
               const meta = severityMeta[item.severity];
@@ -109,8 +109,8 @@ export function SecurityFeed() {
           </div>
 
           {/* Edge fades */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--surface-solid)] to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--surface-solid)] to-transparent" />
         </div>
 
         {/* Stat row */}
@@ -128,7 +128,7 @@ export function SecurityFeed() {
             return (
               <div
                 key={sev}
-                className="terminal-border flex items-center gap-3 rounded-md bg-[#0a0a0a]/60 p-3"
+                className="terminal-border flex items-center gap-3 rounded-md bg-[var(--surface)] p-3"
               >
                 <div
                   className="flex h-9 w-9 items-center justify-center rounded-md"

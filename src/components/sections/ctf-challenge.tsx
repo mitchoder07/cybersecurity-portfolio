@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Terminal,
@@ -54,10 +54,7 @@ export function CtfChallenge() {
     inputRef.current?.focus();
   };
 
-  // Auto-focus input on mount
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+  // Do not focus the challenge on page load: browser focus scrolling would skip the hero.
 
   return (
     <section id="ctf" className="section-pad relative bg-[var(--neon)]/[0.015]">
@@ -117,7 +114,7 @@ export function CtfChallenge() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="terminal-border mx-auto max-w-3xl overflow-hidden rounded-md bg-[#0a0a0a]/90 backdrop-blur-md"
+          className="terminal-border mx-auto max-w-3xl overflow-hidden rounded-md bg-[var(--surface-strong)] backdrop-blur-md"
         >
           {/* Terminal header */}
           <div className="flex items-center justify-between border-b border-[var(--neon)]/20 bg-[var(--neon)]/[0.03] px-4 py-2.5">
@@ -189,7 +186,7 @@ export function CtfChallenge() {
                   <p className="mt-1.5 font-mono text-xs text-foreground/80">
                     {t.ctf.successMessage}
                   </p>
-                  <div className="mt-2 rounded border border-[var(--neon)]/30 bg-[#0a0a0a] px-3 py-1.5 font-mono text-sm text-[var(--neon)]">
+                  <div className="mt-2 rounded border border-[var(--neon)]/30 bg-[var(--surface-solid)] px-3 py-1.5 font-mono text-sm text-[var(--neon)]">
                     {t.ctf.flag}
                   </div>
                 </motion.div>
@@ -218,7 +215,7 @@ export function CtfChallenge() {
                       }}
                       placeholder={t.ctf.inputPlaceholder}
                       className={cn(
-                        "w-full rounded-md border bg-[#0a0a0a]/80 py-3 pl-8 pr-4 font-mono text-sm text-[var(--neon)] outline-none transition-colors placeholder:text-foreground/30",
+                        "w-full rounded-md border bg-[var(--surface)] py-3 pl-8 pr-4 font-mono text-sm text-[var(--neon)] outline-none transition-colors placeholder:text-foreground/30",
                         status === "wrong"
                           ? "border-[var(--danger)] focus:border-[var(--danger)]"
                           : "border-[var(--neon)]/30 focus:border-[var(--neon)]"

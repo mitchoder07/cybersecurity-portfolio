@@ -37,7 +37,7 @@ export function Certifications() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 whileHover={{ y: -4 }}
-                className="terminal-border group relative overflow-hidden rounded-md bg-[#0a0a0a]/70 p-5 backdrop-blur-sm transition-all duration-300 hover:bg-[#0a0a0a]/90 sm:p-6"
+                className="terminal-border group relative overflow-hidden rounded-md bg-[var(--surface)] p-5 backdrop-blur-sm transition-all duration-300 hover:bg-[var(--surface-strong)] sm:p-6"
                 data-cursor="pointer"
               >
                 {/* Hover glow */}

@@ -60,7 +60,7 @@ export function SecurityTools() {
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.35, delay: i * 0.04 }}
                 whileHover={{ y: -4 }}
-                className="terminal-border group flex flex-col items-center gap-3 rounded-md bg-[#0a0a0a]/70 p-5 text-center backdrop-blur-sm transition-all duration-300 hover:bg-[#0a0a0a]/90"
+                className="terminal-border group flex flex-col items-center gap-3 rounded-md bg-[var(--surface)] p-5 text-center backdrop-blur-sm transition-all duration-300 hover:bg-[var(--surface-strong)]"
                 data-cursor="pointer"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-md border border-[var(--neon)]/25 bg-[var(--neon)]/[0.05] transition-all duration-300 group-hover:scale-110 group-hover:border-[var(--neon)]/55 group-hover:bg-[var(--neon)]/15">
