@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 // Single, stable profile image used everywhere (navbar, mobile drawer, footer).
 // The avatar no longer rotates through anime/Upin characters.
-const PROFILE_IMAGE = "/portfolio-images/profile.jpeg";
+const PROFILE_IMAGE = "/portfolio-images/profile.jpg";
 const PROFILE_NAME = "Abdullah Yusuf";
 
 interface AnimatedLogoProps {
