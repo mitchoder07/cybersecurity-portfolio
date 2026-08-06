@@ -101,7 +101,7 @@ export function MatrixRain({ opacity = 0.6 }: { opacity?: number }) {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none absolute inset-0 h-full w-full"
+      className="matrix-rain pointer-events-none absolute inset-0 h-full w-full"
       style={{ opacity }}
       aria-hidden
     />

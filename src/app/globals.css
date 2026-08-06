@@ -54,9 +54,14 @@
 /* LIGHT MODE — Light terminal: white bg, green text */
 :root {
   --radius: 0.5rem;
-  --background: #f5f7f5;
-  --foreground: #0a2e15;
+  --background: #f4f8f6;
+  --foreground: #102a1c;
   --card: #ffffff;
+  /* Shared application surfaces. These keep terminal components crisp in light mode
+     instead of leaving dark-mode panels scattered through the page. */
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --surface-solid: #ffffff;
   --card-foreground: #0a2e15;
   --popover: #ffffff;
   --popover-foreground: #0a2e15;
@@ -98,6 +103,9 @@
   --background: #0a0a0a;
   --foreground: #00ff41;
   --card: rgba(0, 255, 65, 0.03);
+  --surface: rgba(10, 10, 10, 0.78);
+  --surface-strong: rgba(10, 10, 10, 0.9);
+  --surface-solid: #0a0a0a;
   --card-foreground: #00ff41;
   --popover: #0d0d0d;
   --popover-foreground: #00ff41;
@@ -286,8 +294,9 @@
     z-index: 1;
     animation: scanline-move 8s linear infinite;
   }
-  /* Disable scanlines in light mode for cleanliness */
-  :root .scanlines::after {
+  /* Disable high-contrast terminal effects in light mode for a clean, readable canvas. */
+  :root .scanlines::after,
+  :root .matrix-rain {
     display: none;
   }
 

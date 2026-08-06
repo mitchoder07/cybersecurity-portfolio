@@ -296,7 +296,7 @@ function TerminalInner() {
 
           {/* Terminal window */}
           <div
-            className="terminal-border overflow-hidden rounded-md bg-[#0a0a0a]/90 shadow-2xl shadow-black/40 backdrop-blur-md"
+            className="terminal-border overflow-hidden rounded-md bg-[var(--surface-strong)] shadow-2xl shadow-black/40 backdrop-blur-md"
             onClick={() => inputRef.current?.focus()}
             data-cursor="pointer"
           >

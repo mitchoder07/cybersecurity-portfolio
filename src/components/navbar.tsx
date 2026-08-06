@@ -88,7 +88,7 @@ export function Navbar() {
             className={cn(
               "flex items-center justify-between rounded-md transition-all duration-500",
               scrolled
-                ? "h-14 border border-[var(--neon)]/25 bg-[#0a0a0a]/85 px-4 shadow-lg shadow-black/40 backdrop-blur-md"
+                ? "h-14 border border-[var(--neon)]/25 bg-[var(--surface-strong)] px-4 shadow-lg shadow-black/40 backdrop-blur-md"
                 : "h-14 px-2"
             )}
           >
@@ -159,7 +159,7 @@ export function Navbar() {
             className="fixed inset-0 z-[60] lg:hidden"
           >
             <div
-              className="absolute inset-0 bg-[#0a0a0a]/85 backdrop-blur-sm"
+              className="absolute inset-0 bg-[var(--surface-strong)] backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
@@ -167,7 +167,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 26, stiffness: 240 }}
-              className="absolute right-0 top-0 h-full w-[78%] max-w-sm border-l border-[var(--neon)]/25 bg-[#0a0a0a] p-6 pt-8"
+              className="absolute right-0 top-0 h-full w-[78%] max-w-sm border-l border-[var(--neon)]/25 bg-[var(--surface-solid)] p-6 pt-8"
             >
               <div className="mb-8 flex items-center justify-between">
                 <AnimatedLogo onClick={() => { setMobileOpen(false); scrollTo("home"); }} size="lg" />

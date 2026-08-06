@@ -103,7 +103,7 @@ export function CyberContact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="terminal-border overflow-hidden rounded-md bg-[#0a0a0a]/85 backdrop-blur-md"
+            className="terminal-border overflow-hidden rounded-md bg-[var(--surface-strong)] backdrop-blur-md"
           >
             {/* Terminal-style header */}
             <div className="flex items-center justify-between border-b border-[var(--neon)]/20 bg-[var(--neon)]/[0.03] px-4 py-2.5">
@@ -129,7 +129,7 @@ export function CyberContact() {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder={t.contact.namePlaceholder}
-                    className="h-11 rounded-md border-[var(--neon)]/25 bg-[#0a0a0a]/60 font-mono text-sm text-[var(--neon)] placeholder:text-foreground/30 focus:border-[var(--neon)]"
+                    className="h-11 rounded-md border-[var(--neon)]/25 bg-[var(--surface)] font-mono text-sm text-[var(--neon)] placeholder:text-foreground/30 focus:border-[var(--neon)]"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -142,7 +142,7 @@ export function CyberContact() {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     placeholder={t.contact.emailPlaceholder}
-                    className="h-11 rounded-md border-[var(--neon)]/25 bg-[#0a0a0a]/60 font-mono text-sm text-[var(--neon)] placeholder:text-foreground/30 focus:border-[var(--neon)]"
+                    className="h-11 rounded-md border-[var(--neon)]/25 bg-[var(--surface)] font-mono text-sm text-[var(--neon)] placeholder:text-foreground/30 focus:border-[var(--neon)]"
                   />
                 </div>
               </div>
@@ -155,7 +155,7 @@ export function CyberContact() {
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   placeholder={t.contact.messagePlaceholder}
-                  className="min-h-[140px] rounded-md border-[var(--neon)]/25 bg-[#0a0a0a]/60 font-mono text-sm text-[var(--neon)] placeholder:text-foreground/30 focus:border-[var(--neon)]"
+                  className="min-h-[140px] rounded-md border-[var(--neon)]/25 bg-[var(--surface)] font-mono text-sm text-[var(--neon)] placeholder:text-foreground/30 focus:border-[var(--neon)]"
                 />
               </div>
 
@@ -196,7 +196,7 @@ export function CyberContact() {
           >
             <a
               href={`mailto:${EMAIL}`}
-              className="group flex items-center gap-3 rounded-md border border-[var(--neon)]/20 bg-[#0a0a0a]/60 p-4 transition-all duration-300 hover:border-[var(--neon)]/55 hover:bg-[var(--neon)]/[0.06]"
+              className="group flex items-center gap-3 rounded-md border border-[var(--neon)]/20 bg-[var(--surface)] p-4 transition-all duration-300 hover:border-[var(--neon)]/55 hover:bg-[var(--neon)]/[0.06]"
               data-cursor="pointer"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-md border border-[var(--neon)]/30 bg-[var(--neon)]/10 transition-transform duration-300 group-hover:scale-110">
@@ -217,7 +217,7 @@ export function CyberContact() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 rounded-md border border-[var(--cyber)]/25 bg-[#0a0a0a]/60 p-4 transition-all duration-300 hover:border-[var(--cyber)]/60 hover:bg-[var(--cyber)]/[0.06]"
+              className="group flex items-center gap-3 rounded-md border border-[var(--cyber)]/25 bg-[var(--surface)] p-4 transition-all duration-300 hover:border-[var(--cyber)]/60 hover:bg-[var(--cyber)]/[0.06]"
               data-cursor="pointer"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-md border border-[var(--cyber)]/30 bg-[var(--cyber)]/10 transition-transform duration-300 group-hover:scale-110">
@@ -249,7 +249,7 @@ export function CyberContact() {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex h-16 flex-col items-center justify-center gap-1.5 rounded-md border border-[var(--neon)]/20 bg-[#0a0a0a]/60 transition-all duration-300 hover:border-[var(--neon)]/50 hover:bg-[var(--neon)]/[0.06]"
+                      className="group flex h-16 flex-col items-center justify-center gap-1.5 rounded-md border border-[var(--neon)]/20 bg-[var(--surface)] transition-all duration-300 hover:border-[var(--neon)]/50 hover:bg-[var(--neon)]/[0.06]"
                       data-cursor="pointer"
                     >
                       <Icon

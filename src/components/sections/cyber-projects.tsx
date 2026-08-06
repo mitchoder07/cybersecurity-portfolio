@@ -82,7 +82,7 @@ export function CyberProjects() {
             {/* Left: case study */}
             <div className="flex min-w-0 flex-col">
               {/* Project image / gradient area */}
-              <div className="terminal-border relative mb-5 aspect-[16/9] w-full overflow-hidden rounded-md bg-[#0a0a0a]">
+              <div className="terminal-border relative mb-5 aspect-[16/9] w-full overflow-hidden rounded-md bg-[var(--surface-solid)]">
                 {isClassified ? (
                   <div
                     className="relative h-full w-full"
@@ -127,7 +127,7 @@ export function CyberProjects() {
                 {/* Classified badge */}
                 {isClassified && (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex items-center gap-1.5 rounded-md border border-[var(--amber)]/50 bg-[#0a0a0a]/85 px-3 py-1.5 font-mono text-xs font-semibold text-[var(--amber)] backdrop-blur-sm">
+                    <div className="flex items-center gap-1.5 rounded-md border border-[var(--amber)]/50 bg-[var(--surface-strong)] px-3 py-1.5 font-mono text-xs font-semibold text-[var(--amber)] backdrop-blur-sm">
                       <Lock className="h-3.5 w-3.5" />
                       {t.projects.classified}
                     </div>
