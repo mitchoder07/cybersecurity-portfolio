@@ -58,7 +58,7 @@ export function CyberHero() {
       className="relative min-h-screen w-full overflow-hidden bg-grid scanlines"
     >
       {/* Matrix rain canvas background — full screen, no dark overlay */}
-      <div className="absolute inset-0 -z-10 bg-[var(--surface-solid)]">
+      <div className="absolute inset-0 z-0 bg-[var(--surface-solid)] pointer-events-none">
         <MatrixRain opacity={0.35} />
       </div>
 
@@ -88,11 +88,11 @@ export function CyberHero() {
       </div>
 
       {/* Threat map — bottom right background */}
-      <div className="absolute bottom-0 right-0 -z-[5] h-[60vh] w-full opacity-40 sm:h-[80vh] sm:w-[70%] lg:w-[55%]">
+      <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-[60vh] w-full opacity-40 sm:h-[80vh] sm:w-[70%] lg:w-[55%]">
         <ThreatMap className="h-full w-full" />
       </div>
 
-      <div className="container-max relative flex min-h-screen flex-col justify-center px-4 pt-32 pb-20 sm:px-6 lg:px-8">
+      <div className="container-max relative z-10 flex min-h-screen flex-col justify-center px-4 pt-32 pb-20 sm:px-6 lg:px-8">
         <div className="relative w-full max-w-3xl pb-2 md:pb-4">
           {/* Badge */}
           <motion.div
